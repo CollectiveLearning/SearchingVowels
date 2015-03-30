@@ -17,7 +17,7 @@ folder.
 You must write the vowels count and for performance porpouse, please add
 the execution time.
 
-{"a"=>7068250, "e"=>10896375, "i"=>5726875, "o"=>7613375, "u"=>2682750}
-"run in 19.570065 seconds"
-{"a"=>7068250, "e"=>10896375, "i"=>5726875, "o"=>7613375, "u"=>2682750}
-"run in 27.433981 seconds"
+    {"a"=>7068250, "e"=>10896375, "i"=>5726875, "o"=>7613375, "u"=>2682750}
+    "run in 17.698776 seconds"
+    {"a"=>7068250, "e"=>10896375, "i"=>5726875, "o"=>7613375, "u"=>2682750}
+    "run in 26.862483 seconds"
