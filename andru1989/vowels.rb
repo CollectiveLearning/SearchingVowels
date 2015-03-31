@@ -56,7 +56,7 @@ class Vowels
   # Parameters:
   #   => It receives the current line of the opened file
   def set_values(line)
-    @vowels.keys.each{|k| @vowels[k] += line.scan(k).length}
+    @vowels.keys.each{|k| @vowels[k] += line.scan(/["#{k}#{k.upcase}"]/).length}
   end
 
   # Private:
