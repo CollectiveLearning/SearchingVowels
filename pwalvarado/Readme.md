@@ -17,8 +17,12 @@ folder.
 You must write the vowels count and for performance porpouse, please add
 the execution time.
 
+´´´
+ruby sequential_vowels.rb
+
   {"i"=>3550018, "u"=>1487946, "o"=>4236236, "a"=>4049408, "e"=>6050373}
   run in 13.933200414 secs
 
   {"i"=>3550018, "u"=>1487946, "o"=>4236236, "a"=>4049408, "e"=>6050373}
    run in 13.956841962 secs
+´´´
