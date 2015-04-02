@@ -8,17 +8,21 @@ class CountVowels
     open_file.each_line.map { |line| line }
   end
 
-    arr = []
-    file_ary.each_slice(1000) do |sub_ary|
-    arr << Thread.new do
-        Thread.current['vowel'] = {'a' => 0, 'e' => 0, 'i' => 0, 'o'=> 0, 'u' => 0}
   def parse_file_parallel
+    threads = []
+    file_ary.each_slice(10000) do |ary|
+      values = Hash.new(0)
+      threads << Thread.new do
         vowels.each do |k,v|
-          Thread.current['vowel'][k] += sub_ary.join.scan(k).count
+          values[k] += ary.join.scan(/#{k}/i).count
         end
+        Thread.current[:result] = values
       end
     end
-    arr.each {|t| t.join; t['vowel'].each{|k,v| vowels[k] += v}}
+    threads.each do |t|
+      t.join
+      t[:result].each {|k, v| vowels[k] += v}
+    end
   end
 
   def parse_file_sequential
