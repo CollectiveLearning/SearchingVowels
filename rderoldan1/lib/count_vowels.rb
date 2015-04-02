@@ -24,7 +24,7 @@ class CountVowels
   def parse_file_sequential
     file_ary.each do |ary|
       vowels.each do |k,v|
-        vowels[k] += ary.scan(k).count
+        vowels[k] += ary.scan(/#{k}/i).count
       end
     end
   end
