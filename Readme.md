@@ -14,10 +14,12 @@ folder.
 
 ### Output
 
-You must write the vowels count and for performance porpouse, please add
+You must write the vowels count and for performance purpose, please add
 the execution time.
 
-    {"a"=>7068250, "e"=>10896375, "i"=>5726875, "o"=>7613375, "u"=>2682750}
-    "run in 17.698776 seconds"
-    {"a"=>7068250, "e"=>10896375, "i"=>5726875, "o"=>7613375, "u"=>2682750}
-    "run in 26.862483 seconds"
+    Sequential Search
+    {"a"=>4049408, "e"=>6050373, "i"=>3550018, "o"=>4236236, "u"=>1487946}
+    run in 19.486149 seconds
+    Parallel Search
+    {"a"=>4049408, "e"=>6050373, "i"=>3550018, "o"=>4236236, "u"=>1487946}
+    run in 11.334201 seconds
