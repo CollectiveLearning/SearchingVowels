@@ -42,8 +42,9 @@ class CountVowels
     count = new
     count.parse_file_parallel
     end_time = Time.now
+    puts "Parallel Search"
     p count.vowels
-    p "run in #{end_time - start_time} seconds"
+    puts "run in #{end_time - start_time} seconds"
   end
 
   def self.run_sequential
@@ -51,8 +52,9 @@ class CountVowels
     count = new
     count.parse_file_sequential
     end_time = Time.now
+    puts "Sequential Search"
     p count.vowels
-    p "run in #{end_time - start_time} seconds"
+    puts "run in #{end_time - start_time} seconds"
   end
 
   def self.run
