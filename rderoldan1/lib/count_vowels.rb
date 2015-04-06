@@ -14,7 +14,7 @@ class CountVowels
       values = Hash.new(0)
       threads << Thread.new do
         vowels.each do |k,v|
-          values[k] += ary.join.scan(/#{k}/i).count
+          values[k] += ary.join.downcase.scan(k).count
         end
         Thread.current[:result] = values
       end
@@ -28,7 +28,7 @@ class CountVowels
   def parse_file_sequential
     file_ary.each do |ary|
       vowels.each do |k,v|
-        vowels[k] += ary.scan(/#{k}/i).count
+        vowels[k] += ary.downcase.scan(k).count
       end
     end
   end
