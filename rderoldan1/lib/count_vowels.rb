@@ -34,7 +34,7 @@ class CountVowels
   end
 
   def open_file
-    File.open(file_path)
+    File.open(File.join(root_path, 'support','text.txt'))
   end
 
   def root_path
