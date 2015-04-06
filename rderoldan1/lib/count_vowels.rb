@@ -37,8 +37,8 @@ class CountVowels
     File.open(file_path)
   end
 
-  def file_path
-    File.join(File.expand_path(File.dirname(__FILE__)), '..', 'support', 'text.txt')
+  def root_path
+    File.join(File.expand_path(File.dirname(__FILE__)), '..')
   end
 
   def self.run_parallel
