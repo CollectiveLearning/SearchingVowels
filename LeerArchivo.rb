@@ -1,5 +1,4 @@
 class Archivo
-
   def self.vocales
     vocales = ['a',"e","i","o","u"]
   end
@@ -28,7 +27,6 @@ class Archivo
   def self.cronometro(tiempo_inicial, tiempo_final)
     tiempo_final - tiempo_inicial
   end
-
 end
 
 Archivo.abrir_archivo
