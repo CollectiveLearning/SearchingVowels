@@ -34,7 +34,6 @@ class SearchVowels
         validate(c)
       end
     end
-    #p @count
     print(vowels)
   end
 
