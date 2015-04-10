@@ -1,7 +1,6 @@
 class SearchVowels
 
   def initialize
-    @count = 0
     vowels
   end
 
@@ -40,7 +39,6 @@ class SearchVowels
   def validate char
     if !@vowels[char].nil?
       @vowels[char] += 1
-      @count += 1
     end
     time_finish Time.now
   end
