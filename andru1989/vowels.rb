@@ -50,13 +50,13 @@ class Vowels
   # Private:
   #
   #   => Do a loop of the '@vowels' keys
-  #   => Scan in the current line if the current key(vowel) was found
+  #   => Scan in the current line after convert it to downcase if the current key(vowel) was found
   #   => Accumulate in the current key the size of the Array that the scan method returned
   #
   # Parameters:
   #   => It receives the current line of the opened file
   def set_values(line)
-    @vowels.keys.each{|k| @vowels[k] += line.scan(/["#{k}#{k.upcase}"]/).length}
+    @vowels.keys.each{|k| @vowels[k] += line.downcase.scan(k).length}
   end
 
   # Private:
