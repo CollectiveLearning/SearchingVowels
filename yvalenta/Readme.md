@@ -23,9 +23,5 @@ the execution time.
 ### Sequential
 
 ➜  yvalenta git:(master) ✗ ruby search.rb
-"a => 4049408"
-"e => 6050373"
-"i => 3550018"
-"o => 4236236"
-"u => 1487946"
-Run in 621.660120862 seconds (around 16 years to execute)
+{"a"=>3920318, "e"=>6043579, "i"=>3176342, "o"=>4222648, "u"=>1487946}
+Run in 19.212047635 seconds

@@ -27,27 +27,19 @@ class SearchVowels
   end
 
   def run file
+    res = Hash.new(0)
     time_start Time.now
     file.each_line do |line|
-      line.downcase.split("").each do |c|
-        validate(c)
+      vowels.each do |k,v|
+        res[k] += line.scan(k).count
       end
     end
-    print(vowels)
-  end
-
-  def validate char
-    if !@vowels[char].nil?
-      @vowels[char] += 1
-    end
     time_finish Time.now
+    print(res)
   end
 
-  def print vowels
-    vowels.each do |k,v|
-      p "#{k} => #{v}"
-    end
-    puts "Run in #{(@time_f.finish - @time_s.start)} seconds (around 16 years to execute)"
+  def print response
+    puts "#{response} \nRun in #{(@time_f.finish - @time_s.start)} seconds."
   end
 
 end
