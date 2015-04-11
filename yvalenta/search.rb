@@ -26,7 +26,7 @@ class SearchVowels
     @time[:start] = Time.now
     file.each_line do |line|
       vowels.each do |k,v|
-        res[k] += line.scan(k).count
+        res[k] += line.downcase.scan(k).count
       end
     end
     @time[:finish] = Time.now
