@@ -24,4 +24,4 @@ the execution time.
 
 ➜  yvalenta git:(master) ✗ ruby search.rb
 {"a"=>3920318, "e"=>6043579, "i"=>3176342, "o"=>4222648, "u"=>1487946}
-Run in 19.212047635 seconds
+Run in 14.946895835 seconds.
