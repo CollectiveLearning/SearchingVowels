@@ -52,4 +52,4 @@ class SearchVowels
 
 end
 
-print SearchVowels.new().open_file
+SearchVowels.new().open_file
