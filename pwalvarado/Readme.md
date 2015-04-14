@@ -19,11 +19,42 @@ the execution time.
 
 Run with:
 
-    ruby sequential_vowels.rb
+    ruby counting_vowels.rb
 
 Output:
 
-    {"i"=>3550018, "u"=>1487946, "o"=>4236236, "a"=>4049408, "e"=>6050373}
-    run in 13.933200414 secs
-    {"i"=>3550018, "u"=>1487946, "o"=>4236236, "a"=>4049408, "e"=>6050373}
-    run in 13.956841962 secs
+    These are different outputs to differents slice_sizes (1000, 2000, 400):
+
+
+    slice_size 1000 ± : ruby counting_vowels.rb
+    Sequential counting
+     {"a"=>4049408, "e"=>6050373, "i"=>3550018, "o"=>4236236, "u"=>1487946}
+    run in 8.451438418 secs
+
+    Parallel counting
+     {"a"=>4049408, "e"=>6050373, "i"=>3550018, "o"=>4236236, "u"=>1487946}
+    run in 9.275045906 secs
+
+    #----------------------------------------------------------------------------------------------------
+
+
+    slice_size 2000 ± : ruby counting_vowels.rb
+    Sequential counting
+     {"a"=>4049408, "e"=>6050373, "i"=>3550018, "o"=>4236236, "u"=>1487946}
+    run in 8.392084578 secs
+
+    Parallel
+    counting {"a"=>4049408, "e"=>6050373, "i"=>3550018, "o"=>4236236, "u"=>1487946}
+    run in 9.039424403 secs
+
+    #----------------------------------------------------------------------------------------------------
+
+    slice_size 4000  ± : ruby counting_vowels.rb
+
+    Sequential counting
+     {"a"=>4049408, "e"=>6050373, "i"=>3550018, "o"=>4236236, "u"=>1487946}
+    run in 7.97836736 secs
+
+    Parallel counting
+     {"a"=>4049408, "e"=>6050373, "i"=>3550018, "o"=>4236236, "u"=>1487946}
+    run in 8.668010215 secs
