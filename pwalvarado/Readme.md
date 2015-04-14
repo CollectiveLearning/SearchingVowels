@@ -23,7 +23,7 @@ Run with:
 
 Output:
 
-    These are different outputs to differents slice_sizes (1000, 2000, 400):
+    These are different outputs for differents slice_sizes (1000, 2000, 4000):
 
 
     slice_size 1000 ± : ruby counting_vowels.rb
