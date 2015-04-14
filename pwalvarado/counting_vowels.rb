@@ -31,7 +31,9 @@ class SequentialVowels
       ary.push(Thread.new do
         sum = Hash.new(0)
         line = batch_lines.join.downcase
-        vowels.each { |k, _v| sum[k] = line.scan(k).count }
+        vowels.each do |k, _v|
+          sum[k] = line.scan(k).count
+        end
         Thread.current[:result] = sum
       end)
     end
