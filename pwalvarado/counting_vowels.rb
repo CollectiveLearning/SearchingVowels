@@ -1,37 +1,39 @@
-require 'benchmark'
-
+require "benchmark"
 class SequentialVowels
-
   def self.run
     sequential = new
     time = Benchmark.measure { sequential.sequential_parse }
-    print "Sequential counting \n #{sequential.vowels} \nrun in #{time.real} secs"
+    print "Sequential counting
+    #{sequential.vowels}
+    run in #{time.real} secs"
 
     threaded = new
     time = Benchmark.measure { threaded.threading_parse }
-    "\n\nParallel counting \n #{threaded.vowels} \nrun in #{time.real} secs"
+    "\n\nParallel counting
+    #{threaded.vowels}
+    run in #{time.real} secs"
   end
 
   def vowels
-    @vowels ||= {"a" => 0, "e" => 0, "i" => 0, "o" => 0, "u" => 0 }
+    @vowels ||= { "a" => 0, "e" => 0, "i" => 0, "o" => 0, "u" => 0 }
   end
 
   def sequential_parse
-    open_file.each_slice(4000) do | batch_lines |
+    open_file.each_slice(4000) do |batch_lines|
       line = batch_lines.join.downcase
-      vowels.each { |k, v| vowels[k] += line.scan(k).count }
+      vowels.each { |k, _v| vowels[k] += line.scan(k).count }
     end
   end
 
   def threading_parse
     ary = []
-    open_file.each_slice(4000) do | batch_lines |
-      ary.push(Thread.new{
+    open_file.each_slice(4000) do |batch_lines|
+      ary.push(Thread.new do
         sum = Hash.new(0)
         line = batch_lines.join.downcase
-        vowels.each { |k, v| sum[k] = line.scan(k).count }
+        vowels.each { |k, _v| sum[k] = line.scan(k).count }
         Thread.current[:result] = sum
-      })
+      end)
     end
 
     ary.each do |thr|
