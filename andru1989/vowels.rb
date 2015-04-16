@@ -71,7 +71,7 @@ class Vowels
   def print_vowels
     p @vowels
     p "Run in #{(self.final - self.initial)} Seconds"
-    @vowels.keys.each{|k| k = 0}
+    @vowels.each{ |k, v| k = 0 }
   end
 
   # Private:
