@@ -43,4 +43,3 @@ class SearchVowels
 end
 
 SearchVowels.new.open_file
-
