@@ -4,7 +4,7 @@ class SearchVowels
   end
 
   def open_file
-    f = File.open("../text.txt", "r")
+    f = File.open(File.dirname(__FILE__) + '/../text.txt')
     run(f)
   end
 
