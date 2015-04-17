@@ -6,7 +6,6 @@ class SearchVowels
   def open_file
     f = File.open("../text.txt", "r")
     run(f)
-    f.close
   end
 
   private

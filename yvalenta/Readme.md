@@ -14,7 +14,8 @@ folder.
 
 To run the program just type this command in terminal:
 
-`ruby search.rb`
+`ruby sequential_search.rb` for sequential search
+`ruby parallel_search.rb` for parallel search
 
 ### Output
 
