@@ -10,8 +10,8 @@ class Vowels
   #   => This method set a Hash to accumulate the number of vowels for each line
   #   => Default: {'a' => 0, 'e' => 0, 'i' => 0, 'o' => 0, 'u' => 0}
   def initialize
-    @vowels   = {'a' => 0, 'e' => 0, 'i' => 0, 'o' => 0, 'u' => 0}
-    @threads  = []
+    @vowels = { 'a' => 0, 'e' => 0, 'i' => 0, 'o' => 0, 'u' => 0  }
+    @threads = []
   end
 
   # Public:
@@ -56,7 +56,7 @@ class Vowels
         set_values(ary)
       end
     end
-    @threads.each{|t| t.join}
+    @threads.each(&:join)
     self.final = Time.now
 
     print_vowels
@@ -71,15 +71,16 @@ class Vowels
   def print_vowels
     p @vowels
     p "Run in #{(self.final - self.initial)} Seconds"
-    @vowels.each{ |k, v| k = 0 }
   end
 
   # Private:
   #
   #   => Do a loop of the '@vowels' keys
   #   => Validate if the value is 'String' class
-  #   => Scan in the current line after convert it to downcase if the current key(vowel) was found and the class is 'String'
-  #   => If the class of the value isn't string first do a 'join' and then a downcase to scan it
+  #   => Scan in the current line after convert it to downcase if the current key(vowel)
+  #      was found and the class is 'String'
+  #   => If the class of the value isn't string first do a 'join' and then
+  #      a downcase to scan it
   #   => Accumulate in the current key the size of the Array that the scan method returned
   #
   # Parameters:
@@ -87,9 +88,9 @@ class Vowels
   def set_values(value)
     @vowels.keys.each do |k|
       @vowels[k] += case value.class.to_s
-        when 'String' ; value.downcase.scan(k).length
-        when 'Array'  ; value.join.downcase.scan(k).length
-      end
+                      when 'String' ; value.downcase.scan(k).length
+                      when 'Array' ; value.join.downcase.scan(k).length
+                    end
     end
   end
 
