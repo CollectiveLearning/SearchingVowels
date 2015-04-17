@@ -77,8 +77,8 @@ class Vowels
   #
   #   => Do a loop of the '@vowels' keys
   #   => Validate if the value is 'String' class
-  #   => Scan in the current line after convert it to downcase if the current key(vowel)
-  #      was found and the class is 'String'
+  #   => Scan in the current line after convert it to downcase if the
+  #      current key(vowel) was found and the class is 'String'
   #   => If the class of the value isn't string first do a 'join' and then
   #      a downcase to scan it
   #   => Accumulate in the current key the size of the Array that the scan method returned
