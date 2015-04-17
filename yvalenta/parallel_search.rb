@@ -12,7 +12,7 @@ class SearchVowels
   private
 
   def vowels
-    @vowels ||= { "a" => 0, "e" => 0, "i" => 0, "o" => 0, "u" => 0 }
+    @vowels ||= { "a"=> 0, "e" => 0, "i" => 0, "o" => 0, "u" => 0 }
   end
 
   def run(file)
@@ -24,7 +24,7 @@ class SearchVowels
         slice.join.downcase.scan(/[aeiou]/).each do |vowel|
           hash_values[vowel] += 1
         end
-      Thread.current[:result] = hash_values
+        Thread.current[:result] = hash_values
       end
     end
     @time[:finish] = Time.now
