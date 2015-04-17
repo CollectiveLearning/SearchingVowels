@@ -12,7 +12,7 @@ class SearchVowels
   private
 
   def vowels
-    @vowels ||= { "a"=> 0, "e" => 0, "i" => 0, "o" => 0, "u" => 0 }
+    @vowels ||= { "a" => 0, "e" => 0, "i" => 0, "o" => 0, "u" => 0 }
   end
 
   def run(file)
