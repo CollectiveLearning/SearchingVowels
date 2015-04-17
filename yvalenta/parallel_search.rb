@@ -26,13 +26,13 @@ class SearchVowels
         Thread.current[:result] = hash_values
       end
     end
-    @time[:finish] = Time.now
     threads.each do |t|
       t.join
       t[:result].each do |k, v|
         vowels[k] += v
       end
     end
+    @time[:finish] = Time.now
     print(vowels)
   end
 
