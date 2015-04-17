@@ -5,6 +5,7 @@ learn how to use threads in ruby, so, we need to design a solution to find
 the number of words in a very long text in two ways
 
 1. Sequential
+2. Threads
 
 Plase use the file "text.txt" for your solution, copy it in your solution
 folder.
@@ -22,6 +23,12 @@ the execution time.
 
 ### Sequential
 
-➜  yvalenta git:(master) ✗ ruby search.rb
+➜  yvalenta git:(master) ✗ ruby sequential_search.rb
 {"a"=>4049408, "e"=>6050373, "i"=>3550018, "o"=>4236236, "u"=>1487946}
-Run in 16.385092057 seconds.
+Run in 12.943612394 seconds.
+
+### Threads
+
+➜  yvalenta git:(master) ✗ ruby parallel_search.rb
+{"a"=>4049408, "e"=>6050373, "i"=>3550018, "o"=>4236236, "u"=>1487946}
+Run in 9.724001381 seconds.
