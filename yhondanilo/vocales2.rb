@@ -1,5 +1,4 @@
 class Vowels
-
   def ejecutar
     tiempo_inicial = Time.now
     search
@@ -8,20 +7,18 @@ class Vowels
   end
 
   def search
-    File.open('text.txt','r') do |f|
+    File.open("text.txt", "r") do |f|
       @char_count = Hash.new(0)
       f.each_char do |c|
-        if c.downcase == 'a'
+        if c.downcase == "a"
+          @char_count[c] += 1          
+        elsif c.downcase == "e"
+          @char_count[c] += 1          
+        elsif c.downcase == "i"
           @char_count[c] += 1
-          
-        elsif c.downcase == 'e'
+        elsif c.downcase == "o"
           @char_count[c] += 1
-          
-        elsif c.downcase == 'i'
-          @char_count[c] += 1
-        elsif c.downcase == 'o'
-          @char_count[c] += 1
-        elsif c.downcase == 'u'
+        elsif c.downcase == "u"
           @char_count[c] += 1
         end
       end
