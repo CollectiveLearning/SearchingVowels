@@ -11,9 +11,9 @@ class Vowels
       @char_count = Hash.new(0)
       f.each_char do |c|
         if c.downcase == "a"
-          @char_count[c] += 1          
+          @char_count[c] += 1
         elsif c.downcase == "e"
-          @char_count[c] += 1          
+          @char_count[c] += 1
         elsif c.downcase == "i"
           @char_count[c] += 1
         elsif c.downcase == "o"
